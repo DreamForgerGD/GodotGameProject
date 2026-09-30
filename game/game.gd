@@ -9,7 +9,6 @@ var game_active := true
 
 @onready var hud: CanvasLayer = $Hud
 
-
 func _process(delta: float) -> void:
 	if not game_active:
 		return
@@ -22,10 +21,12 @@ func _process(delta: float) -> void:
 	hud.set_time(int(time_left))
 
 func _on_win() -> void:
-	get_tree().change_scene_to_file(WIN_SCENE)
+	game_active = false
+	get_tree().call_deferred("change_scene_to_file", WIN_SCENE)
 
 func _on_lose() -> void:
-	get_tree().change_scene_to_file(LOSE_SCENE)
+	game_active = false
+	get_tree().call_deferred("change_scene_to_file", LOSE_SCENE)
 
 func _ready() -> void:
 	Events.win.connect(_on_win)

@@ -6,4 +6,4 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		Globals.add_point()
-		queue_free()
+		call_deferred("queue_free")
