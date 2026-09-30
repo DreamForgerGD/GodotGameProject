@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b6vlyf154gafa"]
+
+[ext_resource type="Script" uid="uid://dflvln2irfg5f" path="res://ui/lose_screen.gd" id="1_ehrbl"]
+
+[node name="LoseScreen" type="CanvasLayer" unique_id=1704033176]
+script = ExtResource("1_ehrbl")
+
+[node name="Label" type="Label" parent="." unique_id=250238991]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "YOU LOOOOOOOOSE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LoseButton" type="Button" parent="." unique_id=627602740]
+custom_minimum_size = Vector2(300, 60)
+offset_left = 426.0
+offset_top = 400.0
+offset_right = 434.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 28
+text = "Menu"

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cw551xga37l8w"]
+
+[ext_resource type="Script" uid="uid://csu6jhpxu24nq" path="res://ui/main_menu.gd" id="1_t7e0r"]
+
+[node name="MainMenu" type="CanvasLayer" unique_id=1542944343]
+script = ExtResource("1_t7e0r")
+
+[node name="Backgroud" type="ColorRect" parent="." unique_id=1770114929]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.6666667, 0.4117647, 1, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1708617735]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 100.0
+offset_bottom = 199.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 72
+text = "Coin Eater"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="." unique_id=839295958]
+custom_minimum_size = Vector2(300, 60)
+offset_left = 426.0
+offset_top = 300.0
+offset_right = 726.0
+offset_bottom = 360.0
+theme_override_font_sizes/font_size = 32
+text = "New Game
+"
+
+[node name="QuitButton" type="Button" parent="." unique_id=1868429948]
+custom_minimum_size = Vector2(300, 60)
+offset_left = 426.0
+offset_top = 380.0
+offset_right = 726.0
+offset_bottom = 440.0
+theme_override_font_sizes/font_size = 32
+text = "Quit"

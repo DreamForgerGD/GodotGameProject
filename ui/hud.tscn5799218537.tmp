@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://vvg4ksp8vd4m"]
+
+[ext_resource type="Script" uid="uid://c44fhu4es8uon" path="res://ui/hud.gd" id="1_rbyyf"]
+
+[node name="Hud" type="CanvasLayer" unique_id=969528655]
+script = ExtResource("1_rbyyf")
+
+[node name="Label" type="Label" parent="." unique_id=1108874078]
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 119.0
+offset_bottom = 94.0
+theme_override_font_sizes/font_size = 24
+text = "Points: 0"
+
+[node name="TimerLabel" type="Label" parent="." unique_id=729115667]
+offset_left = 20.0
+offset_top = 60.0
+offset_right = 60.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 24
+text = "Left: 10"

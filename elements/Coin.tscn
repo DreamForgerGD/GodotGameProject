@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dg1pq5famd24c"]
+
+[ext_resource type="Script" uid="uid://de3bhk4wfhqp" path="res://elements/coin.gd" id="1_o53ou"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6o62y"]
+radius = 12.0
+
+[node name="Coin" type="Area2D" unique_id=1094841285]
+script = ExtResource("1_o53ou")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1262607283]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.6666667, 0.6784314, 0.16862746, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1360662489]
+shape = SubResource("CircleShape2D_6o62y")

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://d03y3f5owbys7"]
+
+[ext_resource type="Script" uid="uid://ckwmfbqsvnofq" path="res://ui/win_screen.gd" id="1_7dp3f"]
+
+[node name="WinScreen" type="CanvasLayer" unique_id=686744331]
+script = ExtResource("1_7dp3f")
+
+[node name="Label" type="Label" parent="." unique_id=329633924]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "YOU WIN!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WinButton" type="Button" parent="." unique_id=2022713190]
+custom_minimum_size = Vector2(300, 60)
+offset_left = 426.0
+offset_top = 400.0
+offset_right = 726.0
+offset_bottom = 460.0
+theme_override_font_sizes/font_size = 28
+text = "Menu"
