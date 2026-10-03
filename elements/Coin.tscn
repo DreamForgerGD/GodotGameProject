@@ -1,19 +1,64 @@
 [gd_scene format=3 uid="uid://dg1pq5famd24c"]
 
 [ext_resource type="Script" uid="uid://de3bhk4wfhqp" path="res://elements/coin.gd" id="1_o53ou"]
+[ext_resource type="Texture2D" uid="uid://odu1yl80kvpj" path="res://assets/chest/Layer-1.png" id="2_jvlba"]
+[ext_resource type="Texture2D" uid="uid://bk851ojjqsct6" path="res://assets/chest/Layer-2.png" id="3_3uh86"]
+[ext_resource type="Texture2D" uid="uid://dfmy3dxwv4iuf" path="res://assets/chest/Layer-3.png" id="4_x1as2"]
+[ext_resource type="Texture2D" uid="uid://dgmqgwpx4uwer" path="res://assets/chest/Layer-4.png" id="5_4kmwe"]
+[ext_resource type="Texture2D" uid="uid://tu4qtbkc6ifc" path="res://assets/chest/Layer-5.png" id="6_73fv6"]
+[ext_resource type="Texture2D" uid="uid://cmh1vt85tnekq" path="res://assets/chest/Layer-6.png" id="7_eecf1"]
+[ext_resource type="Texture2D" uid="uid://7gfrd0kluuqk" path="res://assets/chest/Layer-7.png" id="8_bhjcj"]
+[ext_resource type="Texture2D" uid="uid://dvtt0yinwhc37" path="res://assets/chest/Layer-8.png" id="9_idr62"]
+[ext_resource type="Texture2D" uid="uid://c40tjmj2dm20a" path="res://assets/chest/Layer-9.png" id="10_auhbl"]
+[ext_resource type="Texture2D" uid="uid://m0s1l2es8lge" path="res://assets/chest/Layer-10.png" id="11_gl5lu"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6o62y"]
-radius = 12.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6o62y"]
+size = Vector2(45, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o53ou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jvlba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3uh86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x1as2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4kmwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_73fv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_eecf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bhjcj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_idr62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_auhbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gl5lu")
+}],
+"loop": 0,
+"name": &"open",
+"speed": 12.0
+}]
 
 [node name="Coin" type="Area2D" unique_id=1094841285]
 script = ExtResource("1_o53ou")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1262607283]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 10.0
-offset_bottom = 10.0
-color = Color(0.6666667, 0.6784314, 0.16862746, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1360662489]
-shape = SubResource("CircleShape2D_6o62y")
+shape = SubResource("RectangleShape2D_6o62y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1961383270]
+sprite_frames = SubResource("SpriteFrames_o53ou")
+animation = &"open"

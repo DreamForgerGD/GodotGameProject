@@ -1,18 +1,48 @@
 [gd_scene format=3 uid="uid://bk0as2wfgyqy1"]
 
 [ext_resource type="Script" uid="uid://cc4pwlxtmbwxx" path="res://elements/player.gd" id="1_agdhc"]
+[ext_resource type="Texture2D" uid="uid://cauy3kyuy3pl" path="res://assets/Joana/Idle1.png" id="2_av7wc"]
+[ext_resource type="Texture2D" uid="uid://dli4vkibdjip0" path="res://assets/Joana/Idle2.png" id="3_l6ryq"]
+[ext_resource type="Texture2D" uid="uid://drl70csore746" path="res://assets/Joana/Idle3.png" id="4_7k0qv"]
+[ext_resource type="Texture2D" uid="uid://dherexwgb3qej" path="res://assets/Joana/Idle4.png" id="5_gw4ld"]
+[ext_resource type="Texture2D" uid="uid://diyebsnpvt1j4" path="res://assets/Joana/Idle5.png" id="6_6jgfk"]
+[ext_resource type="Texture2D" uid="uid://yhyrkq5wltcp" path="res://assets/Joana/Idle6.png" id="7_wwqto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6o62y"]
-size = Vector2(32, 32)
+size = Vector2(20, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k4bcs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_av7wc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l6ryq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7k0qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_gw4ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6jgfk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wwqto")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 6.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=1485849935]
 script = ExtResource("1_agdhc")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1275289134]
-offset_right = 32.0
-offset_bottom = 32.0
-offset_transform_position = Vector2(-16, -16)
-color = Color(0.34117648, 0.6392157, 0.74509805, 1)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=164054349]
 shape = SubResource("RectangleShape2D_6o62y")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426499158]
+sprite_frames = SubResource("SpriteFrames_k4bcs")
+animation = &"idle"
