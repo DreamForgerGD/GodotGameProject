@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://drkc13tp0vlmd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k4bcs"]
+size = Vector2(32, 32)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_66jes"]
+load_path = "res://.godot/imported/20240707dragon9SlicesA.png-089adf0708b2dd9b10a0e7631002cad0.ctex"
+
+[node name="Wall" type="StaticBody2D" unique_id=1257318884]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1966813081]
+shape = SubResource("RectangleShape2D_k4bcs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=775569652]
+scale = Vector2(0.223, 0.223)
+texture = SubResource("CompressedTexture2D_66jes")
